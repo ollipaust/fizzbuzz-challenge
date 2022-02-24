@@ -92,7 +92,7 @@
 
 .fizzBuzz__list.list-view > li:nth-child(1n) {
 	border: 1px solid #fff;
-	border-bottom: none !important;
+	border-bottom: none;
 }
 
 .fizzDivider {
