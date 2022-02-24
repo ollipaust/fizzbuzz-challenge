@@ -1,0 +1,39 @@
+/* Custom variables & selectors */
+:root {
+    --themeFont: "Open Sans", Helvetica, Arial, Sans-Serif;
+    --main-color: #0f2741;
+    --accent-color: #0077d5;
+    --midBlue-color: hsl(206, 100%, 37%);
+    --input-color: #7b94a3;
+    --light-color: #f5f8fb;
+    --ui-color: #0b85e5;
+    --text-color: #444;
+    --max: 1186px;
+    --boxshadow:  0 1px 3px 0 rgb(0 0 0 / 8%), 0 5px 26px 0 rgb(67 94 131 / 15%);
+    --boxshadow-small:  0 1px 3px rgb(0 0 0 / 10%);
+
+    --black50: rgba(0, 0, 0, 0.5);
+    --black25: rgba(0, 0, 0, 0.25);
+
+    --grey25: rgba(230, 230, 230, 0.25);
+    --grey15: rgba(230, 230, 230, 0.15);
+
+  }
+.flex-box {
+    display: flex;
+}
+.grid-box {
+    display: grid;
+}
+.marginLeft10px {
+    margin-left: 10px;
+}
+.marginRight5px {
+    margin-right: 5px;
+}
+.marginRight10px {
+    margin-right: 10px;
+}
+.marginRight20px {
+    margin-right: 20px;
+}
