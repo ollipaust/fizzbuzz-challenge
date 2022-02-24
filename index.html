@@ -153,6 +153,8 @@
 	gridViewButton.onclick = function() {
 		ul.classList.remove('list-view')
 		ul.classList.add('grid-view')
+		ul.classList.remove('grid-hidden')
+
 	}
 	
 	//mobile menu buttons
@@ -204,7 +206,7 @@
 		const spinner = document.getElementById('spinner')
 		return new Promise(resolve => {
 			setTimeout(() => {
-				resolve('Results loaded');
+				resolve('Results loaded')
 				spinner.remove()
 				btn.innerText = 'Hide Results'
 				btn.classList.replace('loading', 'loading-done')
@@ -234,6 +236,7 @@
 			ul.innerHTML = spinnerElement
 			btn.innerText = 'Loading Results'
 			btn.classList.add('loading')
+			ul.classList.remove('grid-hidden')
 			btn.disabled = true
 			let result = await FizzBuzz()
 			console.log(result)
@@ -254,6 +257,7 @@
 			ul.innerHTML = ''
 			btn.innerText = 'Show Results'
 			btn.classList.remove('loading-done')
+			ul.classList.add('grid-hidden')
 			filters.style.display = 'none'
 			divider.style.display = 'none'
 			console.log('Results deleted from DOM!')
