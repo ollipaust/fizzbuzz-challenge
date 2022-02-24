@@ -1,3 +1,12 @@
+# GITHUB PAGES LIVE PREVIEW '
+https://ollipaust.github.io/fizzbuzz-challenge-statista/
+
+
+
+
+
+__________________________________________________________________________________
+
 # Exercise for Web Developers #
 
 Welcome to our programming exercise for Web Developers. This exercise is split in two parts:
