@@ -1,10 +1,8 @@
 # GITHUB PAGES LIVE PREVIEW '
 https://ollipaust.github.io/fizzbuzz-challenge-statista/
 
-
-
-
-
+# USAGE #
+please only use for learning purposes!
 __________________________________________________________________________________
 
 # Exercise for Web Developers #
