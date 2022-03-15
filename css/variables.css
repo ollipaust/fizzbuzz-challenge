@@ -2,11 +2,19 @@
 :root {
     --themeFont: "Open Sans", Helvetica, Arial, Sans-Serif;
     --main-color: #0f2741;
+    --main-color-lighter: #345276;
     --accent-color: #0077d5;
     --midBlue-color: hsl(206, 100%, 37%);
     --input-color: #7b94a3;
+    --lightgrey-color: #f8fafb;
     --light-color: #f5f8fb;
     --ui-color: #0b85e5;
+    --ui-color-a100: rgba(11, 133, 229, 1);
+    --ui-color-a50: rgba(11, 133, 229, 0.5);
+    --ui-color-a25: rgba(11, 133, 229, 0.25);
+    --ui-color-a15: rgba(11, 133, 229, 0.15);
+    --ui-color-a10: rgba(11, 133, 229, 0.1);
+
     --text-color: #444;
     --max: 1186px;
     --boxshadow:  0 1px 3px 0 rgb(0 0 0 / 8%), 0 5px 26px 0 rgb(67 94 131 / 15%);
@@ -15,6 +23,9 @@
     --black50: rgba(0, 0, 0, 0.5);
     --black25: rgba(0, 0, 0, 0.25);
 
+    --grey100: rgba(230, 230, 230, 1);
+    --grey75: rgba(230, 230, 230, 0.75);
+    --grey50: rgba(230, 230, 230, 0.5);
     --grey25: rgba(230, 230, 230, 0.25);
     --grey15: rgba(230, 230, 230, 0.15);
 

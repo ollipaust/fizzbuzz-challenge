@@ -1,285 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>&bull; Statista &dash; The Statistics Portal for Market Data, Market Research and Market Studies</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="https://cdn.statcdn.com/static/favicon.svg" type="image/svg+xml" sizes="192x192">
-	<link rel="stylesheet" href="css/resets.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/fizzbuzz.css">
-    <link rel="stylesheet" href="css/media.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-	<script src="https://kit.fontawesome.com/97f3a3f8fe.js" crossorigin="anonymous"></script>
-	<script src="js/waves.js"></script>
-</head>
-<body>
-	<div id="main" class="page grid">
-		<div id="animatedBackground" class="animatedBackground flex-box">
-			<div class="canvasWrap">
-				<canvas id="canvas"></canvas>
-			</div>
-		</div>
-		<header id="header" class="page__header flex-box">
-			<div class="contentFlex flex-box">
-				<div class="pageHeader__ui flex-box">
-					<div class="pageHeader__logo">
-						<a href="index.html"> <img src="img/statistaLogo.svg" id="logo" class="logo" alt="Statista Home" /> </a>
-					</div>
-					<div class="pageHeader__searchWrapper">
-						<form id="search" class="searchForm" action="javascript:externalSearch()" aria-label="search form">
-							<input id="searchInput" class="searchInput" type="search" placeholder="Search Statistics" aria-label="search input bar">
-							<button id="searchBtn" class="searchBtn" type="submit" value="Submit" title="Submit button" aria-label="Submit button"><i class="fa-solid fa-magnifying-glass"></i></button>
-						</form>
-					</div>
-				</div>
-				<div class="pageHeader__navMain flex-box">
-					<nav class="navMain" aria-label="Statista main navigation">
-						<ul class="navMain__list flex-box">
-							<li class="navMain__item flex-box"> <a class="navMain__link--highlight" href="index.html" aria-label="home link" title="home">Home</a> </li>
-							<li class="navMain__item flex-box"> <a class="navMain__link" href="https://statista.com/" target="_blank" aria-label="Statista website link" title="Statista Website">More on Statista.com</a> </li>
-						</ul>
-					</nav>
-					<nav class="navMain">
-						<ul class="navMinor__list flex-box">
-							<li class="navMain__item flex-box"> <a id="dropdownMenu" class="navMain__link" target="_blank" aria-label="Olli linkedin profile link" href="" title="To Ollis Linkedin Proflile">&#10132; Olli Paust</a>
-								<ul role="menu" id="dropdown" class="navMain__dropdown flex-box" aria-label="dropdown menu social media">
-									<li><i class="fa fa-brands fa-linkedin marginRight20px"></i><a href="https://www.linkedin.com/in/ollipaust/" target="_blank" title="in/ollipaust"> Linkedin</a></li>
-									<li><i class="fa fa-brands fa-instagram marginRight20px"></i><a href="https://www.instagram.com/olli.paws/" target="_blank" title="@olli.paws"> Instagram</a></li>
-									<li><i class="fa fa-solid fa-at marginRight20px"></i><a href="mailto:ollipaust@gmail.com" title="ollipaust@gmail.com"> E-Mail</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div id="stickyNav" class="pageHeader__stickyHeader pageHeader__stickyHeader--inactive flex-box">
-					<div class="stickyHeader flex-box">
-						<div class="stickyHeader__logo">
-							<a href="index.html"> <img src="img/statistaLogo.svg" id="logoSticky" class="logo" alt="Statista Home" /> </a>
-						</div>
-						<div class="stickyHeader__text flex-box"> 
-                            <a class="navMain__link--highlight" href="mailto:ollipaust@gmail.com" aria-label="home link" title="home"><strong>Send E-Mail</strong></a>
-							<div class="stickyHeader__cta flex-box">
-                                <p class="marginRight5px">
-                                    Do you like this example?
-                                </p>
-                                <p><strong>Please let me know!</strong></p>
-                            </div>
-						</div>
-					</div>
-				</div>
-                <div id="mobileNav" class="pageHeader__mobileNav flex-box">
-                    <div class="mobileNav__logo">
-						<a href="index.html"> <img src="img/statistaLogo.svg" id="logoMobile" class="logo" alt="Statista Home" /></a>
-					</div>
-                    <div class="mobileNav__burgerMenu">
-                        <a href="https://www.statista.com/search/" class="mobileNav__search" target="_blank" title="Statista Search">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </a>
-						<i id="burgerMenu" class="fa-solid fa-bars"></i>
-                        <nav id="mobileNavEl" aria-label="Statista Mobile Navigation" class="mobileNav flex-box hidden">
-							<a id="closeMobileNav" class="mobileNav__closer" aria-label="Close Mobile Navigation"><i class="fa-solid fa-xmark"></i></a>
-                            <ul role="menu" id="dropdownMobile" class="mobileNav__dropdown flex-box" aria-label="dropdown menu social media">
-                                <li><a href="index.html" title="in/ollipaust"> Home</a></li>
-                                <li><a href="https://www.statista.com/" target="_blank" title="Statista"> Statista</a></li>
-                                <li><a href="https://www.statista.com/" target="_blank" title="Statista"> Link 3</a></li>
-                                <li><a href="https://www.statista.com/" target="_blank" title="Statista"> Link 4</a></li>
-                                <li><a href="https://www.statista.com/" target="_blank" title="Statista"> Link 5</a></li>
-                            </ul>
-							<hr class="mobileNavHrBtm" />
-                        </nav>
-                    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>
+      &bull; Statista &dash; The Statistics Portal for Market Data, Market
+      Research and Market Studies
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://cdn.statcdn.com/static/favicon.svg"
+      type="image/svg+xml"
+      sizes="192x192"
+    />
+    <link rel="stylesheet" href="css/resets.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/media.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/97f3a3f8fe.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="main" class="page grid">
+      <header id="header" class="page__header page__header--secondary flex-box">
+        <div class="contentFlex flex-box">
+          <div class="pageHeader__ui flex-box">
+            <div class="pageHeader__logo">
+              <a href="index.html">
+                <img
+                  src="img/statistaLogo.svg"
+                  id="logo"
+                  class="logo"
+                  alt="Statista Home"
+                />
+              </a>
+            </div>
+            <div class="pageHeader__searchWrapper">
+              <form
+                id="search"
+                class="searchForm"
+                action="javascript:externalSearch()"
+                aria-label="search form"
+              >
+                <input
+                  id="searchInput"
+                  class="searchInput"
+                  type="search"
+                  placeholder="Search Statistics"
+                  aria-label="search input bar"
+                />
+                <button
+                  id="searchBtn"
+                  class="searchBtn"
+                  type="submit"
+                  value="Submit"
+                  title="Submit button"
+                  aria-label="Submit button"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="pageHeader__navMain flex-box">
+            <nav class="navMain" aria-label="Statista main navigation">
+              <ul class="navMain__list flex-box">
+                <li class="navMain__item flex-box">
+                  <a
+                    class="navMain__link--highlight"
+                    href="index.html"
+                    aria-label="home link"
+                    title="home"
+                    >Home</a
+                  >
+                </li>
+                <li class="navMain__item flex-box">
+                  <a
+                    class="navMain__link"
+                    href="https://statista.com/"
+                    target="_blank"
+                    aria-label="Statista website link"
+                    title="Statista Website"
+                    >More on Statista.com</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <nav class="navMain">
+              <ul class="navMinor__list flex-box">
+                <li class="navMain__item flex-box">
+                  <a
+                    id="dropdownMenu"
+                    class="navMain__link"
+                    target="_blank"
+                    aria-label="Olli linkedin profile link"
+                    href=""
+                    title="To Ollis Linkedin Proflile"
+                    >&#10132; Olli Paust</a
+                  >
+                  <ul
+                    role="menu"
+                    id="dropdown"
+                    class="navMain__dropdown flex-box"
+                    aria-label="dropdown menu social media"
+                  >
+                    <li>
+                      <i class="fa fa-brands fa-linkedin marginRight20px"></i>
+                      <a
+                        href="https://www.linkedin.com/in/ollipaust/"
+                        target="_blank"
+                        title="in/ollipaust"
+                      >
+                        Linkedin</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa fa-brands fa-instagram marginRight20px"></i>
+                      <a
+                        href="https://www.instagram.com/olli.paws/"
+                        target="_blank"
+                        title="@olli.paws"
+                      >
+                        Instagram</a
+                      >
+                    </li>
+                    <li>
+                      <i class="fa fa-solid fa-at marginRight20px"></i>
+                      <a
+                        href="mailto:ollipaust@gmail.com"
+                        title="ollipaust@gmail.com"
+                      >
+                        E-Mail</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div
+            id="stickyNav"
+            class="pageHeader__stickyHeader pageHeader__stickyHeader--inactive flex-box"
+          >
+            <div class="stickyHeader flex-box">
+              <div class="stickyHeader__logo">
+                <a href="index.html">
+                  <img
+                    src="img/statistaLogo.svg"
+                    id="logoSticky"
+                    class="logo"
+                    alt="Statista Home"
+                  />
+                </a>
+              </div>
+              <div class="stickyHeader__text flex-box">
+                <a
+                  class="navMain__link--highlight"
+                  href="mailto:ollipaust@gmail.com"
+                  aria-label="home link"
+                  title="home"
+                >
+                  <strong>Send E-Mail</strong>
+                </a>
+                <div class="stickyHeader__cta flex-box">
+                  <p class="marginRight5px">Do you like this example?</p>
+                  <p>
+                    <strong>Please let me know!</strong>
+                  </p>
                 </div>
-			</div>
-		</header>
-		<div id="content" class="page__content">
-			<section class="contentSection">
-				<div class="contentSection__inner">
-					<div class="panelCard">
-						<p class="headline--roof">Working at Statista</p>
-						<h1 class="headline">Statista is one of the world&apos;s leading statistics portals.</h1>
-						<p class="paragraph">As a multiple award-winning innovative digital company, Statista provides customers such as Google, Bloomberg, Forbes, Procter &amp; Gamble, or Porsche with high-quality research &amp; analysis, data intelligence, and content marketing products and services.</p>
-						<p class="paragraph">With 1100 employees from over 57 nations and 12 subsidiaries in Europe, North America, and Asia, Statista derives its innovative energy from its internationality and diversity.</p>
-						<p class="paragraph">Statista provides a company culture based around learning by doing and entrepreneurship, offers great career opportunities, and combines the pioneering spirit of a start-up with the stability of an established company.</p>
-						<hr aria-label="horizontal dividing line" />
-						<div id="fizzBuzzList">
-							<p class="headline--roof">&num; Exercise for Web Developers &num;</p>
-							<h2 class="headline">Part 2&colon; FizzBuzz Challenge</h2>
-							<p class="paragraph"> Choose a way to display the numbers 1 to 100 in an unsorted HTML list. Also change all multiples of three to Fizz instead of the number and all multiples of five to Buzz. All numbers which are multiples of both three and five should be changed to FizzBuzz. Use the templates proved in this repository to display the list. Design the list in a clean but sophisticated way that fits the look and feel of Statista.com. Highlight the Fizz, Buzz and FizzBuzz entries each in a unique way </p>
-							<div id="fizzbuzz" class="fizzBuzz flex-box">
-								<button id="fizzBuzzBtn" class="btn" aria-label="results button" onClick="FizzBuzzBtn()">Show Results</button>
-								<hr id="fizzDivider" class="fizzDivider" />
-								<div id="fizzBuzzFilters" class="filter-buttons"> <a class="list-view-button" aria-label="toggle list view"><i class="fa-solid fa-bars"></i> List</a> <a class="grid-view-button" aria-label="toggle grid view"><i class="fa-solid fa-th-large"></i> Grid</a> </div>
-								<ul id="fizzBuzzResults" class="fizzBuzz__list list-view"> </ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
-		<footer id="footer" class="footer flex-box">
-			<div class="footerContent flex-box">
-				<p>Thank you for reviewing my assignment!</p><p>Made with ❤️ and 💪 by Olli Paust.</p>
-			</div>
-		</footer>
-	</div>
-	<script>
-	var handleClick = undefined
-    var mobileNavState = false
+              </div>
+            </div>
+          </div>
+          <div id="mobileNav" class="pageHeader__mobileNav flex-box">
+            <div class="mobileNav__logo">
+              <a href="index.html">
+                <img
+                  src="img/statistaLogo.svg"
+                  id="logoMobile"
+                  class="logo"
+                  alt="Statista Home"
+              /></a>
+            </div>
+            <div class="mobileNav__burgerMenu">
+              <a
+                href="https://www.statista.com/search/"
+                class="mobileNav__search"
+                target="_blank"
+                title="Statista Search"
+              >
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+              <i id="burgerMenu" class="fa-solid fa-bars"></i>
+              <nav
+                id="mobileNavEl"
+                aria-label="Statista Mobile Navigation"
+                class="mobileNav flex-box hidden"
+              >
+                <a
+                  id="closeMobileNav"
+                  class="mobileNav__closer"
+                  aria-label="Close Mobile Navigation"
+                >
+                  <i class="fa-solid fa-xmark"></i>
+                </a>
+                <ul
+                  role="menu"
+                  id="dropdownMobile"
+                  class="mobileNav__dropdown flex-box"
+                  aria-label="dropdown menu social media"
+                >
+                  <li>
+                    <a href="index.html" title="in/ollipaust"> Home</a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.statista.com/"
+                      target="_blank"
+                      title="Statista"
+                    >
+                      Statista</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.statista.com/"
+                      target="_blank"
+                      title="Statista"
+                    >
+                      Link 3</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.statista.com/"
+                      target="_blank"
+                      title="Statista"
+                    >
+                      Link 4</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.statista.com/"
+                      target="_blank"
+                      title="Statista"
+                    >
+                      Link 5</a
+                    >
+                  </li>
+                </ul>
+                <hr class="mobileNavHrBtm" />
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+	  
+      <div id="content" class="page__content">
+        <section class="contentSection">
+          <div class="contentSection__inner">
+            <div class="content__box flex-box">
+              <p class="headline--roof">Read more</p>
+              <h1 class="headline">Related Topics</h1>
+              <div class="divider--small"></div>
 
-	const dropdownTrigger = document.getElementById('dropdownMenu')
-	const dropdown = document.getElementById('dropdown')
+              <aside class="card__container">
+                <div class="card flex-box">Market Leader</div>
+                <div class="card__content">
+                  <div class="card__content--wrapper">
+                    <p class="tag">Toyota</p>
+                    <p class="tag">Honda</p>
+                    <p class="tag">BMW</p>
+                    <p class="tag">Mercedes</p>
+                    <p class="tag">Porsche</p>
+                    <p class="tag">Tesla</p>
+                  </div>
+                </div>
 
-	const mobileNav = document.getElementById('mobileNavEl')
-    const mobileNavTrigger = document.getElementById('burgerMenu')
-    const mobileNavCloseTrigger = document.getElementById('closeMobileNav')
+                <div class="card flex-box">Climate Change</div>
+                <div class="card__content">
+                  <div class="card__content--wrapper">
+                    <p>
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                      magna aliquyam erat, sed diam voluptua. At vero eos et
+                      accusam et justo duo dolores et ea rebum. Stet clita kasd
+                      gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                      sit amet. Lorem ipsum dolor sit amet, consetetur
+                      sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                      ut labore et dolore magna aliquyam erat, sed diam
+                      voluptua. At vero eos et accusam et justo duo dolores et
+                      ea rebum. Stet clita kasd gubergren, no sea takimata
+                      sanctus est Lorem ipsum dolor sit amet.
+                    </p>
+                  </div>
+                </div>
 
-	const ul = document.getElementById('fizzBuzzResults')
-	const btn = document.getElementById('fizzBuzzBtn')
-	const filters = document.getElementById('fizzBuzzFilters')
-	const divider = document.getElementById('fizzDivider')
-	const spinnerElement = '<div id="spinner" class="spinner"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="20" /></svg></div>'
-	const listViewButton = document.querySelector('.list-view-button')
-	const gridViewButton = document.querySelector('.grid-view-button')
+                <div class="card flex-box">Lorem Ipsum 3</div>
+                <div class="card__content">
+                  <div class="card__content--wrapper">
+                    <p>
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                      magna aliquyam erat, sed diam voluptua. At vero eos et
+                      accusam et justo duo dolores et ea rebum. Stet clita kasd
+                      gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                      sit amet. Lorem ipsum dolor sit amet, consetetur
+                      sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                      ut labore et dolore magna aliquyam erat, sed diam
+                      voluptua. At vero eos et accusam et justo duo dolores et
+                      ea rebum. Stet clita kasd gubergren, no sea takimata
+                      sanctus est Lorem ipsum dolor sit amet.
+                    </p>
+                  </div>
+                </div>
 
-	//toggle list view
-	listViewButton.onclick = function() {
-		ul.classList.remove('grid-view')
-		ul.classList.add('list-view')
-	}
-	gridViewButton.onclick = function() {
-		ul.classList.remove('list-view')
-		ul.classList.remove('grid-hidden')
-		ul.classList.add('grid-view')
-	}
-	
-	//mobile menu buttons
-    mobileNavTrigger.onclick = function () {
-        mobileNavState = !mobileNavState
+                <div class="card flex-box">Lorem Ipsum 4</div>
+                <div class="card__content">
+                  <div class="card__content--wrapper">
+                    <p>
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                      magna aliquyam erat, sed diam voluptua. At vero eos et
+                      accusam et justo duo dolores et ea rebum. Stet clita kasd
+                      gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                      sit amet. Lorem ipsum dolor sit amet, consetetur
+                      sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                      ut labore et dolore magna aliquyam erat, sed diam
+                      voluptua. At vero eos et accusam et justo duo dolores et
+                      ea rebum. Stet clita kasd gubergren, no sea takimata
+                      sanctus est Lorem ipsum dolor sit amet.
+                    </p>
+                  </div>
+                </div>
 
-        if (mobileNavState == true) {
-            mobileNav.classList.remove('hidden')
-        mobileNav.classList.add('visible')
-        }
-        else if (mobileNavState == false) {
-            mobileNav.classList.remove('visible')
-            mobileNav.classList.add('hidden')
-        }
-
-    }
-    mobileNavCloseTrigger.onclick = function () {
-        mobileNavState = !mobileNavState
-
-        if (mobileNavState == true) {
-            mobileNav.classList.remove('hidden')
-        mobileNav.classList.add('visible')
-        }
-        else if (mobileNavState == false) {
-            mobileNav.classList.remove('visible')
-            mobileNav.classList.add('hidden')
-        }
-
-	//dropdown menu desktop
-    }
-	dropdown.onmouseenter = function() {
-		dropdown.style.opacity = 1
-	}
-	dropdownTrigger.onmouseenter = function() {
-		dropdown.style.opacity = 1
-	}
-	dropdown.onmouseleave = function() {
-		dropdown.style.opacity = 0
-	}
-	dropdownTrigger.onmouseleave = function() {
-		dropdown.style.opacity = 0
-	}
-
-    //FizzBuzz
-	function FizzBuzz() {
-		var startNr = 0
-		var endNr = 100
-		var str = ''
-		const spinner = document.getElementById('spinner')
-		return new Promise(resolve => {
-			setTimeout(() => {
-				resolve('Results loaded')
-				spinner.remove()
-				btn.innerText = 'Hide Results'
-				btn.classList.replace('loading', 'loading-done')
-				btn.disabled = false
-				filters.style.display = 'flex'
-				divider.style.display = 'block'
-				for(startNr; startNr < endNr; str) {
-					var result = ((++startNr % 3 ? '' : 'fizz') + (startNr % 5 ? '' : 'buzz') || startNr)
-					var multiplesThree = startNr % 3
-					var multiplesFive = startNr % 5
-					var multiplesThreeFive = startNr % 15
-					if(multiplesThreeFive == 0) str = 'fizz-buzz'
-					else if(multiplesThree == 0) str = 'fizz'
-					else if(multiplesFive == 0) str = 'buzz'
-					else str = 'none'
-					var li = document.createElement('li');
-					li.appendChild(document.createTextNode(result));
-					li.setAttribute('class', 'fizzBuzz__item ' + 'item-' + startNr + ' ' + str)
-					ul.appendChild(li);
-				}
-			}, 2000);
-		});
-	}
-    //async call
-	async function GetResults() {
-		try {
-			ul.innerHTML = spinnerElement
-			btn.innerText = 'Loading Results'
-			btn.classList.add('loading')
-			ul.classList.remove('grid-hidden')
-			btn.disabled = true
-			let result = await FizzBuzz()
-			console.log(result)
-		} catch(error) {
-			console.log("Something went wrong!", error)
-		}
-	}
-    //btn handler
-	function FizzBuzzBtn() {
-		handleClick = !handleClick
-		console.log(handleClick ? 'sending request...' : 'deleting results...')
-		if(handleClick == undefined) {
-			handleClick = true
-		} else if(handleClick == true) {
-			GetResults()
-			console.log('Results loading...')
-		} else if(handleClick == false) {
-			ul.innerHTML = ''
-			btn.innerText = 'Show Results'
-			btn.classList.remove('loading-done')
-			ul.classList.add('grid-hidden')
-			filters.style.display = 'none'
-			divider.style.display = 'none'
-			console.log('Results deleted from DOM!')
-		}
-	}
-    //searchbar
-	function externalSearch() {
-		var searchInput = document.getElementById('searchInput')
-		var searchUrl = 'https://www.statista.com/search/?q=' + searchInput.value + '&Search=&qKat=search&newSearch=true'
-		return window.open(searchUrl, '')
-	}
-	window.onscroll = function() {
-		scrollFunction()
-	}
-    //sticky header
-	function scrollFunction() {
-		var sn = document.getElementById('stickyNav')
-		if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-			sn.setAttribute('class', 'pageHeader__stickyHeader pageHeader__stickyHeader--active flex-box')
-		} else {
-			sn.setAttribute('class', 'pageHeader__stickyHeader pageHeader__stickyHeader--inactive flex-box')
-		}
-	}
-	</script>
-</body>
-
+                <div class="card flex-box">Lorem Ipsum 5</div>
+                <div class="card__content">
+                  <div class="card__content--wrapper">
+                    <p>
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr,
+                      sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                      magna aliquyam erat, sed diam voluptua. At vero eos et
+                      accusam et justo duo dolores et ea rebum. Stet clita kasd
+                      gubergren, no sea takimata sanctus est Lorem ipsum dolor
+                      sit amet. Lorem ipsum dolor sit amet, consetetur
+                      sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+                      ut labore et dolore magna aliquyam erat, sed diam
+                      voluptua. At vero eos et accusam et justo duo dolores et
+                      ea rebum. Stet clita kasd gubergren, no sea takimata
+                      sanctus est Lorem ipsum dolor sit amet.
+                    </p>
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <footer id="footer" class="footer flex-box">
+      <div class="footerContent flex-box">
+        <p>Thank you for reviewing my assignment!</p>
+        <p>Made with ❤️ and 💪 by Olli Paust.</p>
+      </div>
+    </footer>
+    <script src="js/scripts.js"></script>
+    <script src="js/related_topics.js"></script>
+  </body>
 </html>
