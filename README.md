@@ -1,5 +1,5 @@
 # GITHUB PAGES LIVE PREVIEW '
-https://ollipaust.github.io/fizzbuzz-challenge/
+https://ollipaust.github.io/statista-tasks/
 
 # USAGE #
 please only use for learning purposes!
