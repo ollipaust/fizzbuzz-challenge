@@ -1,39 +1,35 @@
-@media only screen 
-  and (min-device-width: 300px) 
-  and (max-device-width: 844px)
-  and (orientation: portrait)
-  and (-webkit-min-device-pixel-ratio: 2) {
-/* Styles */
-.pageHeader__ui,
-.pageHeader__navMain {
-    display: none!important;
-}
+@media only screen and (min-device-width: 300px) and (max-device-width: 844px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+  .pageHeader__ui,
+  .pageHeader__navMain {
+    display: none !important;
+  }
 
-.page__header {
+  .page__header {
     height: 62px;
-    padding: 0!important;
-}
-.pageHeader__logo > a > .logo {
+    padding: 0 !important;
+  }
+  .pageHeader__logo > a > .logo {
     width: 154px;
     height: 30px;
-}
-.panelCard {
+  }
+  .panelCard {
     padding: 40px 20px;
     margin-top: 25px;
-}
+  }
 
-.footerContent {
-    flex-direction: column!important;
-}
-.pageHeader__stickyHeader {
-    background: #fff!important;
-}
-.stickyHeader {
+  .footerContent {
+    flex-direction: column !important;
+  }
+  .pageHeader__stickyHeader {
+    background: #fff !important;
+  }
+  .stickyHeader {
     padding: 10px;
     width: auto;
     place-content: center;
-}
-.stickyHeader__text {
+  }
+  .stickyHeader__text {
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     place-content: flex-start space-between;
@@ -41,58 +37,60 @@
     font-family: var(--themeFont);
     color: var(--text-color);
     width: auto;
-}
-.stickyHeader__cta {
+  }
+  .stickyHeader__cta {
     flex-direction: column;
     margin-right: 50px;
-}
-.stickyHeader__text > a {
+  }
+  .stickyHeader__text > a {
     margin-right: 0;
-}
-.stickyHeader__logo {
+  }
+  .stickyHeader__logo {
     display: none;
-}
-.fizzBuzz__list.grid-view {
+  }
+  .fizzBuzz__list.grid-view {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(20, 1fr);
+  }
+  .card__container {
+    width: 100% !important;
+  }
 }
-}
-@media only screen 
-  and (min-device-width: 600px) 
-  and (max-device-width: 1024px)
-  and (orientation: landscape)
-  and (-webkit-min-device-pixel-ratio: 2) {
-/* Styles */
-.pageHeader__ui,
-.pageHeader__navMain {
-    display: none!important;
-}
+@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
+  /* Styles */
+  .pageHeader__ui,
+  .pageHeader__navMain {
+    display: none !important;
+  }
 
-.page__header {
+  .page__header {
     height: 62px;
-    padding: 0!important;
-}
-.pageHeader__logo > a > .logo {
+    padding: 0 !important;
+  }
+  .pageHeader__logo > a > .logo {
     width: 154px;
     height: 30px;
-}
-.panelCard {
+  }
+  .card__container {
+    width: 100% !important;
+  }
+  .panelCard {
     padding: 40px 20px;
     margin-top: 25px;
-}
+  }
 
-.footerContent {
-    flex-direction: column!important;
-}
-.pageHeader__stickyHeader {
-    background: #fff!important;
-}
-.stickyHeader {
+  .footerContent {
+    flex-direction: column !important;
+  }
+  .pageHeader__stickyHeader {
+    background: #fff !important;
+  }
+  .stickyHeader {
     padding: 10px;
     width: auto;
     place-content: center;
-}
-.stickyHeader__text {
+  }
+  .stickyHeader__text {
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     place-content: flex-start space-between;
@@ -100,28 +98,26 @@
     font-family: var(--themeFont);
     color: var(--text-color);
     width: auto;
-}
-.stickyHeader__cta {
+  }
+  .stickyHeader__cta {
     flex-direction: column;
     margin-right: 50px;
-}
-.stickyHeader__text > a {
+  }
+  .stickyHeader__text > a {
     margin-right: 0;
-}
-.stickyHeader__logo {
+  }
+  .stickyHeader__logo {
     display: none;
-}
-.fizzBuzz__list.grid-view {
+  }
+  .fizzBuzz__list.grid-view {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(20, 1fr);
-}
+  }
 }
 
-
-@media only screen
-and (min-width : 1224px) {
-/* Styles */
-.pageHeader__mobileNav {
-    display: none!important;
-}
+@media only screen and (min-width: 1224px) {
+  /* Styles */
+  .pageHeader__mobileNav {
+    display: none !important;
+  }
 }

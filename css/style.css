@@ -631,6 +631,7 @@ strong {
   width: 500px;
   height: auto;
   box-shadow: var(--boxshadow);
+  box-sizing: border-box;
   border-radius: 10px;
   padding: 10px 20px;
 }
@@ -688,7 +689,7 @@ strong {
   margin-bottom: 50px;
 }
 .card__content > div > p {
-	text-align: justify;
+  text-align: justify;
 }
 .tag {
   display: inline-block;
